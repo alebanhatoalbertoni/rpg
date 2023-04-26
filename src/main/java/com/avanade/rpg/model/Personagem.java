@@ -17,15 +17,15 @@ public class Personagem implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", nullable = false)
+    @Column(name = "ID")
     private Long id;
-    @Column(name = "TIPO", nullable = false)
+    @Column(name = "TIPO")
     private String tipo;
     @Column(name = "NOME")
     private String nome;
-    @Column(name = "VIDA", nullable = false)
+    @Column(name = "VIDA")
     private double vida;
-    @Column(name = "FORCA", nullable = false)
+    @Column(name = "FORCA")
     private double forca;
     @Column(name = "DEFESA")
     private double defesa;

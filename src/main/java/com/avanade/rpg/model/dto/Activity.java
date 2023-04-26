@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Activity {
     private String id;
-    private String type;
+    private String tipo;
 }

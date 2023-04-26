@@ -20,14 +20,14 @@ public class PersonagemService {
     private BoredApiService boredApiService;
 
     public Personagem create(Personagem personagem) {
-        personagem.setTipo(null);
-        personagem.setNome(null);
-        personagem.setVida(0);
-        personagem.setForca(0);
-        personagem.setDefesa(0);
-        personagem.setAgilidade(0);
-        personagem.setQtddados(0);
-        personagem.setFaces(0);
+//        personagem.setTipo(null);
+//        personagem.setNome(null);
+//        personagem.setVida(0);
+//        personagem.setForca(0);
+//        personagem.setDefesa(0);
+//        personagem.setAgilidade(0);
+//        personagem.setQtddados(0);
+//        personagem.setFaces(0);
        return this.repository.save(personagem);
     }
 
