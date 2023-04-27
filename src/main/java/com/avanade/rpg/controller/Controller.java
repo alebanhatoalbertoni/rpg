@@ -20,38 +20,38 @@ public class Controller {
     @Autowired
     private PersonagemService service;
 
-    @GetMapping("/rpg")
+    @GetMapping("/personagem")
     @ApiOperation("find a Personagem in RPG list")
     public ResponseEntity<List<Personagem>> getAll() {
         return new ResponseEntity<>(service.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/rpg/{id}")
+    @GetMapping("/personagem/{id}")
     @ApiOperation("find a Personagem by it's id in the RPG list")
     public ResponseEntity<Personagem> getById(@PathVariable(value = "id") Long personagemID) {
         return new ResponseEntity<>(service.findById(personagemID), HttpStatus.OK);
     }
 
-    @PostMapping("/rpg")
+    @PostMapping("/personagem")
     @ApiOperation("Create a new Personagem in RPG list")
     public ResponseEntity<Personagem> create(@RequestBody Personagem personagem) {
         return new ResponseEntity<>(service.create(personagem), HttpStatus.CREATED);
     }
 
-    @PutMapping("/rpg")
+    @PutMapping("/personagem")
     @ApiOperation("Update a Personagem on RPG list")
     public ResponseEntity<Personagem> update(@RequestBody Personagem personagem) {
         return new ResponseEntity<>(service.update(personagem), HttpStatus.OK);
     }
 
-    @DeleteMapping("/rpg")
+    @DeleteMapping("/personagem")
     @ApiOperation("Delete a Personagem on RPG list")
     public ResponseEntity<HttpStatus> update(@RequestHeader Long personagemID) {
         service.delete(personagemID);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @PostMapping("/rpg/random")
+    @PostMapping("/personagem/random")
     @ApiOperation("Create a random Personagem on RPG list")
     public ResponseEntity<Personagem> createRandom() {
         return new ResponseEntity<>(service.generateRandom(), HttpStatus.CREATED);
